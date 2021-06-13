@@ -1,5 +1,6 @@
 package org.task;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,5 +13,11 @@ System.setProperty("webdriver.chrome.driver","D:\\Automation\\Selenium\\Selenium
 	WebDriver driver =new ChromeDriver();
 	
 	driver.manage().window().maximize();
+	
+	driver.get("https://www.facebook.com/");
+	
+	driver.findElement(By.id("email")).sendKeys("prathap");
+	driver.findElement(By.id("pass")).sendKeys("12345");
+	driver.findElement(By.name("login")).click();
 }
 }
